@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /stats
+
+# DaynRecord — Free Loan Agreement Generator
+# Supported languages: English (en), French (fr), Arabic (ar)
+
+Sitemap: https://daynrecord.netlify.app/sitemap.xml

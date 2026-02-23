@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="40" fill="#064E3B"/>
+  <circle cx="96" cy="96" r="56" fill="none" stroke="#C4A052" stroke-width="2" opacity="0.3"/>
+  <path d="M96 52 A8.967 8.967 0 0 0 78 47.75c-1.052 0-2.062.18-3 .512v58.25A8.987 8.987 0 0 1 78 104c2.305 0 4.408.867 6 2.292m12-54.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v58.25A8.987 8.987 0 0 0 102 104a8.967 8.967 0 0 0-6 2.292m0-54.25v54.25"
+    fill="none" stroke="#E4C882" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"
+    transform="translate(12, 12)"/>
+  <text x="96" y="148" text-anchor="middle" font-family="serif" font-size="18" font-weight="bold" fill="#E4C882">DaynRecord</text>
+</svg>

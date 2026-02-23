@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-islamic-cream-100 font-inter text-gray-800 antialiased;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-amiri;
+	}
+}
+
+@layer components {
+	.islamic-card {
+		@apply rounded-islamic border-islamic-gold-200/60 relative overflow-hidden border bg-white/90 shadow-[0_2px_16px_rgba(6,78,59,0.06)] backdrop-blur-sm;
+	}
+
+	.islamic-card::before {
+		content: "";
+		@apply from-islamic-green-800 via-islamic-gold-500 to-islamic-green-800 absolute top-0 right-0 left-0 h-1 bg-gradient-to-r;
+	}
+
+	.islamic-heading {
+		@apply font-amiri text-islamic-green-900 tracking-wide;
+	}
+
+	.islamic-input {
+		@apply border-islamic-cream-400 bg-islamic-cream-50 focus:border-islamic-green-600 focus:ring-islamic-green-600/20 w-full rounded-lg border px-4 py-3 text-gray-800 placeholder-gray-400 transition-all duration-200 focus:ring-2 focus:outline-none;
+	}
+
+	.islamic-label {
+		@apply text-islamic-green-900 mb-1.5 block text-sm font-medium;
+	}
+
+	.islamic-btn-primary {
+		@apply bg-islamic-green-800 hover:bg-islamic-green-900 active:bg-islamic-green-950 focus:ring-islamic-green-600/40 inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-medium text-white shadow-sm transition-all duration-200 hover:shadow-md focus:ring-2 focus:outline-none;
+	}
+
+	.islamic-btn-secondary {
+		@apply text-islamic-green-800 border-islamic-green-700/30 hover:bg-islamic-cream-200 active:bg-islamic-cream-300 focus:ring-islamic-green-600/20 inline-flex items-center justify-center gap-2 rounded-lg border bg-white px-6 py-3 font-medium transition-all duration-200 focus:ring-2 focus:outline-none;
+	}
+
+	.islamic-btn-gold {
+		@apply from-islamic-gold-500 to-islamic-gold-600 hover:from-islamic-gold-600 hover:to-islamic-gold-700 focus:ring-islamic-gold-400/40 inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r px-6 py-3 font-medium text-white shadow-sm transition-all duration-200 hover:shadow-md focus:ring-2 focus:outline-none;
+	}
+
+	.islamic-divider {
+		@apply relative my-8;
+	}
+
+	.islamic-divider::before {
+		content: "✦";
+		@apply text-islamic-gold-500 bg-islamic-cream-100 absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 px-4 text-lg;
+	}
+
+	.islamic-divider::after {
+		content: "";
+		@apply via-islamic-gold-400 absolute top-1/2 right-0 left-0 h-px bg-gradient-to-r from-transparent to-transparent;
+	}
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+/* Slide-down animation for toasts */
+@keyframes slide-down {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -1rem);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+}
+.animate-slide-down {
+	animation: slide-down 0.3s ease-out;
+}
+
+/* Islamic geometric pattern overlay */
+.islamic-pattern-bg {
+	background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23064E3B' stroke-opacity='0.04' stroke-width='1'%3E%3Cpath d='M0 40 L20 20 L40 40 L20 60Z'/%3E%3Cpath d='M40 0 L60 20 L40 40 L20 20Z'/%3E%3Cpath d='M40 40 L60 20 L80 40 L60 60Z'/%3E%3Cpath d='M40 40 L60 60 L40 80 L20 60Z'/%3E%3Ccircle cx='40' cy='40' r='3'/%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='80' cy='0' r='3'/%3E%3Ccircle cx='0' cy='80' r='3'/%3E%3Ccircle cx='80' cy='80' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Signature canvas styling */
+.signature-canvas {
+	touch-action: none;
+	cursor: crosshair;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+/* Mobile-first: larger touch targets */
+@media (max-width: 640px) {
+	.islamic-input {
+		@apply py-3.5 text-base;
+		font-size: 16px; /* prevents iOS zoom */
+	}
+
+	.islamic-btn-primary,
+	.islamic-btn-secondary,
+	.islamic-btn-gold {
+		@apply py-3.5 text-base;
+		min-height: 48px;
+	}
+}
+
+/* RTL support */
+[dir="rtl"] .rtl\:rotate-180 {
+	transform: rotate(180deg);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	@apply bg-islamic-cream-200;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-islamic-green-700/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-islamic-green-700/50;
+}
