@@ -242,10 +242,10 @@ daynrecord/
    - `NEXT_PUBLIC_SITE_URL` — your Netlify domain
    - `ANALYTICS_SECRET` — secret key for the `/stats` dashboard
 
-### Vercel
+### Vercel (Boycott These Guys)
 
 ```bash
-npx vercel
+echo "Boycott Vercel"
 ```
 
 ### Other Platforms
